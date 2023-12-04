@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Crossword Puzzle </title>
+    <style>
+        .crossword-container {
+            display: grid;
+            grid-template-columns: repeat(8, 40px);
+            gap: 2px;
+        }
+
+        .crossword-square {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ddd;
+        }
+
+        .dark {
+            background-color: rgb(108, 108, 195);
+        }
+
+        .red {
+            background-color: #FF5733;
+        }
+
+        .none {
+            background-color: transparent;
+        }
+
+        body {
+            background-image: url('./images/bg.png');
+            background-size: auto;
+            background-repeat: repeat;
+            background-position: center center;
+            background-color: #f0f0f0;
+        }
+
+        .crossword-wrapper {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 5%;
+        }
+
+        .headings {
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+        }
+
+        h2 {
+            font-size: 2em;
+        }
+
+        h4 {
+            font-size: 1em;
+        }
+
+        @media (max-width: 600px) {
+            .crossword-container {
+                display: grid;
+                grid-template-columns: repeat(8, 20px);
+                gap: 2px;
+            }
+
+            .crossword-square {
+                width: 20px;
+                height: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                font-size: 8px;
+                cursor: pointer;
+                border: 0.5px solid #ddd;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="headings">
+        <h1>English Literary Association</h1>
+        <h2>Crime Scene Chronicles</h2>
+        <h4>Find the first clue</h4>
+    </div>
+
+    <div class="crossword-wrapper">
+        <div class="crossword-container">
+            <div class="crossword-square" onclick="changeColor(this)">A</div>
+            <div class="crossword-square" onclick="changeColor(this)">C</div>
+            <div class="crossword-square" onclick="changeColor(this)">C</div>
+            <div class="crossword-square" onclick="changeColor(this)">U</div>
+            <div class="crossword-square" onclick="changeColor(this)">R</div>
+            <div class="crossword-square" onclick="changeColor(this)">A</div>
+            <div class="crossword-square" onclick="changeColor(this)">T</div>
+            <div class="crossword-square" onclick="changeColor(this)">E</div>
+            <div class="crossword-square" onclick="changeColor(this)">H</div>
+            <div class="crossword-square" onclick="changeColor(this)">E</div>
+            <div class="crossword-square" onclick="changeColor(this)">N</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">B</div>
+            <div class="crossword-square" onclick="changeColor(this)">O</div>
+            <div class="crossword-square" onclick="changeColor(this)">X</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">A</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">S</div>
+            <div class="crossword-square" onclick="changeColor(this)">H</div>
+            <div class="crossword-square" onclick="changeColor(this)">A</div>
+            <div class="crossword-square" onclick="changeColor(this)">K</div>
+            <div class="crossword-square" onclick="changeColor(this)">Y</div>
+            <div class="crossword-square" onclick="changeColor(this)">M</div>
+            <div class="crossword-square" onclick="changeColor(this)">R</div>
+            <div class="crossword-square" onclick="changeColor(this)">L</div>
+            <div class="crossword-square" onclick="changeColor(this)">I</div>
+            <div class="crossword-square" onclick="changeColor(this)">H</div>
+            <div class="crossword-square" onclick="changeColor(this)">Z</div>
+            <div class="crossword-square" onclick="changeColor(this)">K</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">C</div>
+            <div class="crossword-square" onclick="changeColor(this)">D</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">M</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">A</div>
+            <div class="crossword-square" onclick="changeColor(this)">S</div>
+            <div class="crossword-square" onclick="changeColor(this)">T</div>
+            <div class="crossword-square" onclick="changeColor(this)">L</div>
+            <div class="crossword-square" onclick="changeColor(this)">V</div>
+            <div class="crossword-square" onclick="changeColor(this)">Q</div>
+            <div class="crossword-square" onclick="changeColor(this)">P</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">Z</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">E</div>
+            <div class="crossword-square" onclick="changeColor(this)">I</div>
+            <div class="crossword-square" onclick="changeColor(this)">E</div>
+            <div class="crossword-square" onclick="changeColor(this)">L</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">M</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">Y</div>
+            <div class="crossword-square" onclick="changeColor(this)">A</div>
+            <div class="crossword-square" onclick="changeColor(this)">S</div>
+            <div class="crossword-square" onclick="changeColor(this)">Q</div>
+            <div class="crossword-square" onclick="changeColor(this)">E</div>
+            <div class="crossword-square" onclick="changeColor(this)">A</div>
+            <div class="crossword-square" onclick="changeColor(this)">R</div>
+            <div class="crossword-square" onclick="changeColor(this)">E</div>
+            <div class="crossword-square" onclick="changeColor(this)">G</div>
+            <div class="crossword-square" onclick="changeColor(this)">R</div>
+
+        </div>
+    </div>
+
+    <script>
+        function changeColor(element) {
+            if (!element.classList.contains('dark')) {
+                element.classList.add('dark');
+            } else {
+                if (element.classList.contains('red')) {
+                    element.classList.remove('red');
+                    element.classList.add('none');
+                }
+                else if (element.classList.contains('none')) {
+                    element.classList.remove('none');
+                    element.classList.add('dark');
+                }
+                else {
+                    element.classList.add('red');
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
